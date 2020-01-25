@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% from "event-card.html" import render_event_card %}
+
+{% block body %}
+<header class="v-header">
+    <div class="fullscreen-video-wrap">
+        <video src="static/videos/banner.mp4" autoplay="true" loop="true" muted="true" style="filter: blur(7px);">
+        </video>
+    </div>
+</header>
+<img src="static/images/logo.png" class="is-3by3" width="20%" style="position: absolute; top: 250px; left: 40vw;">
+<div class="is-size-1 has-text-white has-text-centered">
+    EVENTS
+</div>
+<div class="container events">
+    <div class="columns">
+        {% for field in range(3) %}
+        <div class="column thicc-yellow-border">
+            {{ render_event_card(field) }}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="is-size-1 has-text-white has-text-centered">
+    GALLERY
+</div>
+{% include "gallery-carousel.html" %}
+<div class="is-size-1 has-text-white has-text-centered">
+    SCOREBOARD
+</div>
+{% include "score-card.html" %}
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="static/css/index.css">
+<link rel="stylesheet" href="static/css/progress-bar.css">
+{% endblock %}
+
+{% block script %}
+<script>
+</script>
+{% endblock %}

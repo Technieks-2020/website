@@ -1,0 +1,21 @@
+{% macro render_event_card(event) %}
+<div class="card">
+    <div class="card-image">
+      <figure class="image is-16by9">
+        <img src="https://www.dropbox.com/s/ixf9zucfc4k1gs6/ML%20Workshop%20Rubix.png?raw=1" alt="Placeholder image">
+      </figure>
+    </div>
+    <div class="card-content has-text-centered has-text-white event-card">
+      <div class="media">
+        <div class="media-content has-text-centered">
+          <p class="title is-4 has-text-white">John Smith</p>
+          <p class="subtitle is-6 has-text-white">@johnsmith</p>
+        </div>
+      </div>
+  
+      <div class="content">
+        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+      </div>
+    </div>
+</div>
+{% endmacro %}
