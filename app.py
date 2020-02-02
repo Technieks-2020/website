@@ -43,7 +43,7 @@ def index():
 #    gc = gspread.authorize(credentials)
 #    wks = gc.open_by_key('10pB43SvGbIWX0LEGaRfkYe1XYa_bw-OvlvdUgj-66gQ').sheet1
 #    sdata = wks.get_all_values()
-    return render_template('index.html')
+     return render_template('index.html')
 #FIX THIS
 #    return render_template('index.html',data=sdata[1:])
 
