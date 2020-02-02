@@ -36,6 +36,7 @@ def onesignalthird():
     return send_from_directory(app.static_folder,request.path[1:])
 
 @app.route('/')
+    return "Hello world"
 @app.route('/index.html/')
 def index():
 #    scope = ['https://spreadsheets.google.com/feeds']
@@ -43,7 +44,7 @@ def index():
 #    gc = gspread.authorize(credentials)
 #    wks = gc.open_by_key('10pB43SvGbIWX0LEGaRfkYe1XYa_bw-OvlvdUgj-66gQ').sheet1
 #    sdata = wks.get_all_values()
-     return render_template('index.html')
+    return render_template('index.html')
 #FIX THIS
 #    return render_template('index.html',data=sdata[1:])
 
