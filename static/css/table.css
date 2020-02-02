@@ -1,0 +1,124 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+.body1 {
+  overflow-x: auto;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  color:#A7A1AE;
+}
+
+
+.container th  {
+
+
+	  font-weight: bold;
+	  font-size: 15px;
+  text-align: left;
+  color: #FFFFFF;
+  font-family: "Segoe UI";
+}
+
+table {
+  table-layout:fixed;
+  font-family: "Segoe UI";
+}
+
+.container td {
+
+	  font-weight: normal;
+	  font-size: 15px;
+  /* -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+	   -moz-box-shadow: 0 2px 2px -2px #0E1119;
+	        box-shadow: 0 2px 2px -2px #0E1119; */
+}
+
+.container {
+  table-layout: auto;
+	  text-align: left;
+	  overflow: hidden;
+	  width: 85%;
+	  margin: 0 auto;
+  /* display: table; */
+  padding: 0 0 8em 0;
+}
+
+
+.container td, .container th {
+	  padding-bottom: 15px;
+	  padding-top: 15px;
+  padding-left:15px;
+}
+
+.container tr
+{
+  color: #000000;
+}
+
+.container tr:nth-child(odd) {
+	  background-color: #bb8fce;
+}
+
+.container tr:nth-child(even) {
+	  background-color:  #d2b4de;
+}
+
+.container th {
+	  background-color: #6c3483;
+}
+
+.container td:first-child {
+   font-weight: bold;
+ }
+
+.container tr:hover {
+   background-color: #6c3483;
+   color: #FFFFFF;
+/* -webkit-box-shadow: 0 6px 6px -6px #0E1119;
+	   -moz-box-shadow: 0 6px 6px -6px #0E1119;
+	        box-shadow: 0 6px 6px -6px #0E1119; */
+}
+
+.container td:hover {
+  background-color: #ffe552;
+  color: #000;
+  font-weight: bold;
+/*
+  box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+  transform: translate3d(6px, -6px, 0);
+
+  transition-delay: 0s;
+	  transition-duration: 0.4s;
+	  transition-property: all;
+  transition-timing-function: line;
+} */
+
+@media (max-width: 800px) {
+/*.container td:nth-child(4),
+.container th:nth-child(4) { display: none; }*/
+}
+
+/*.body1 {
+
+  width: 90%;
+  height: auto;
+  resize:both;
+    overflow:auto;
+
+}
+
+th, td {
+  overflow: auto;
+border: 2px solid black;
+text-align: center;}
+
+
+table {
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    table-layout: auto;
+    resize: both;
+    overflow: auto;
+}*/

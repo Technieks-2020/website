@@ -1,42 +1,319 @@
-{% extends "layout.html" %}
-{% from "event-card.html" import render_event_card %}
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
 
-{% block body %}
-<header class="v-header">
-    <div class="fullscreen-video-wrap">
-        <video src="static/videos/banner.mp4" autoplay="true" loop="true" muted="true" style="filter: blur(7px);">
-        </video>
-    </div>
-</header>
-<img src="static/images/logo.PNG" class="is-3by3" width="20%" style="position: absolute; top: 250px; left: 40vw;">
-<div class="is-size-1 has-text-white has-text-centered">
-    EVENTS
-</div>
-<div class="container events">
-    <div class="columns">
-        {% for field in range(3) %}
-        <div class="column thicc-yellow-border">
-            {{ render_event_card(field) }}
-        </div>
-        {% endfor %}
-    </div>
-</div>
-<div class="is-size-1 has-text-white has-text-centered">
-    GALLERY
-</div>
-{% include "gallery-carousel.html" %}
-<div class="is-size-1 has-text-white has-text-centered">
-    SCOREBOARD
-</div>
-{% include "score-card.html" %}
-{% endblock %}
-
-{% block style %}
-<link rel="stylesheet" href="static/css/index.css">
-<link rel="stylesheet" href="static/css/progress-bar.css">
-{% endblock %}
-
-{% block script %}
+	<!-- Global site tag (gtag.js?v=1.1) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114338765-1"></script>
 <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-114338765-1');
 </script>
-{% endblock %}
+
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>techNIEks</title>
+		<link rel="icon" type="image/ico" href="/static/images/favicon.png" />
+	<meta name="description" content="techNIEks is a 3-Day national level techno-cultural extravaganza organized by NIE">
+  <meta name="author" content="Milan Menezes , Gunjan , Vishruth , Shriharsha , Ramprasad">
+	<meta name="keywords" content="technieks , NIE , technieks18 , technieks 18 , the national institute of engineering">
+
+
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#161616">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#161616">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#161616">
+
+
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="/static/css/base.css?v=1.1">
+   <link rel="stylesheet" href="/static/css/main.css?v=1.2">
+   <link rel="stylesheet" href="/static/css/vendor.css?v=1.1">
+   <link rel="stylesheet" href="/static/css/table.css?v=1.1">
+   <link rel="stylesheet" href="/static/css/sponsors.css?v=1.1">
+
+
+   <!-- script
+   ================================================== -->
+	<script src="/static/js/modernizr.js?v=1.1"></script>
+	<script src="/static/js/pace.min.js?v=1.1"></script>
+
+   <!-- favicons
+	================================================== -->
+	<link rel="icon" type="image/png" href="/static/images/favicon.png">
+
+	<!-- Adding oneSignal notification section
+	================================================= -->
+	<link rel="manifest" href="/manifest.json" />
+	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+	<script src="/static/js/onesignal.js?v=1.1"></script>
+
+</head>
+
+<body id="top">
+
+	<!-- header
+   ================================================== -->
+   <header>
+   	<div class="row">
+
+   		<div class="top-bar" >
+   			<a class="menu-toggle" href="#"><span></span></a>
+
+   				<div class="logo menu-toggle">
+		         <a href=""><h2 style="color: white;">MENU</h2></a>
+		      </div>
+
+
+		   	<!-- <nav id="main-nav-wrap">
+					<ul class="main-navigation">
+						<li class="current"><a class="smoothscroll"  href="#intro" title="">Home</a></li>
+            <li><a href="/events" title="">Events</a></li>
+            <li><a class="smoothscroll"  href="#scoreboard" title="">Scoreboard</a></li>
+            <li><a class="smoothscroll"  href="#about" title="">Contact</a></li>
+						<li><a class="smoothscroll"  href="#about" title="">About</a></li>
+					</ul>
+				</nav> -->
+          {% include 'nav.html' %}
+   		</div> <!-- /top-bar -->
+
+   	</div> <!-- /row -->
+   </header> <!-- /header -->
+
+	<!-- intro section
+   ================================================== -->
+   <section id="intro">
+
+   	<div class="intro-overlay"></div>
+
+   	<div class="intro-content">
+   		<div class="row">
+
+   			<div class="col-twelve">
+
+          <center>
+	   			     <img src="static/images/technieks.png" style="width: 400px;">
+          </center>
+
+	   			<a class="button stroke smoothscroll" href="#about" title="">More About Us</a>
+
+	   		</div>
+
+   		</div>
+   	</div> <!-- /intro-content -->
+
+   	<ul class="intro-social">
+         <li><a href="https://www.facebook.com/technieks"><i class="fa fa-facebook"></i></a></li>
+         <li><a href="https://www.instagram.com/technieks_2019/"><i class="fa fa-instagram"></i></a></li>
+         <li><a href="https://www.youtube.com/channel/UC0Ky30GAIfdtGccczVNUIqA"><i class="fa fa-youtube"></i></a></li>
+
+      </ul> <!-- /intro-social -->
+
+   </section> <!-- /intro -->
+
+
+   <!-- about section
+   ================================================== -->
+   <section id="about">
+
+ <div class="row section-intro">
+   <div class="col-twelve">
+
+     <h5>About</h5>
+     <h1>Fiesta of Expressions</h1>
+
+     <div class="intro-info">
+
+
+
+       <p style="font-size:1em;">techNIEks is a 3-Day national level techno-cultural extravaganza organized by NIE.
+       One of its idiosyncrasies is that, it is celebrated with unique themes every year.<br>
+       This time, we have decided the theme : <br><br>
+       "<b>NIVEZA</b> - Fiesta of Expressions"<br><br> We invite you to support us and
+       celebrate the energy for brighter future and brighter ourselves. The expected footfall
+       for three day festival is about 20,000.</p>
+       <a class="button stroke smoothscroll" href="/about" title="">Read More</a>
+     </div>
+   </div>
+ </div> <!-- /section-intro -->
+
+<br>
+</section> <!-- /process-->
+
+
+
+	<!-- Portfolio Section
+   ================================================== -->
+	<section id="portfolio">
+
+		<div class="row section-intro spons-top">
+   		<div class="col-twelve">
+
+   			<h5>Our Sponsors</h5>
+   			<h1>Special Thanks</h1>
+   		</div>
+   	</div> <!-- /section-intro-->
+
+   	<div class="row portfolio-content">
+
+   		<div class="col-twelve">
+
+   			<!-- portfolio-wrapper -->
+	         <div id="folio-wrapper" class="block-1-1 block-mob-full stack sponsors" >
+	         	
+				 <div class="bgrid folio-item" >
+	               <div class="item-wrap"  style="padding: 5%;">
+	               	<img src="/static/images/portfolio/BHAMYS/bhamys_header.jpg" alt="Bhamys Group of Companies" >
+	               </div>
+	        	</div> <!-- /folio-item -->
+				</div> <!-- /portfolio-wrapper -->
+
+				<div id="folio-wrapper" class="block-1-2 block-mob-full stack sponsors">
+	         	<div class="bgrid folio-item">
+	               <div class="item-wrap"  style="padding: 5%;" >
+	               	<img src="/static/images/portfolio/BHAMYS/rpv_consultants_pvt_ltd.jpg" alt="RPV Consultants Pvt. Ltd" >
+	               </div>
+				</div> <!-- /folio-item -->
+
+				<div class="bgrid folio-item">
+	               <div class="item-wrap"  style="padding: 5%;" >
+	               	<img src="/static/images/portfolio/BHAMYS/bhamys_constructions_pvt_ltd.jpg" alt="BHAMYS Constructions Pvt. Ltd" >
+	               </div>
+				</div> <!-- /folio-item -->	         	
+
+				<div class="bgrid folio-item">
+	               <div class="item-wrap"  style="padding: 5%;"  >
+	               	<img src="/static/images/portfolio/BHAMYS/symahb_valuation_consultants_pvt_ltd.jpg" alt="Symahb Valuation Consultants Pvt. Ltd" >
+	               </div>
+				</div> <!-- /folio-item -->	         	
+				<div class="bgrid folio-item">
+	               <div class="item-wrap"  style="padding: 5%;" >
+	               	<img src="/static/images/portfolio/BHAMYS/softnis_it_management_pvt_ltd.jpg" alt="Softnis IT Management Services Pvt. Ltd" >
+	               </div>
+				</div> <!-- /folio-item -->
+			 </div> <!-- /portfolio-wrapper -->
+
+			<div id="folio-wrapper" class="block-1-1 block-mob-full stack sponsors"></div>
+				<div class="bgrid folio-item">
+					<div class="item-wrap"  style="padding: 5%;" align="center">
+						<img src="static/images/portfolio/swiggy.png" alt="swiggy">
+					</div>
+				 </div> <!-- /folio-item -->
+			 </div> <!-- /portfolio-wrapper -->
+
+			 <div id="folio-wrapper" class="block-1-1 block-mob-full stack sponsors"></div>
+			 <div class="bgrid folio-item">
+				<div class="item-wrap"  style="padding: 5%;">
+					<img src="static/images/portfolio/itChamps.png" alt="I.T.Champs">
+					</div>
+			 </div> <!-- /folio-item -->
+			</div> <!-- /portfolio-wrapper -->
+   		</div>  <!-- /twelve -->
+
+   	</div> <!-- /portfolio-content -->
+
+	</section> <!-- /portfolio -->
+
+
+	<!-- CTA Section
+   ================================================== -->
+	<section id="cta" class="grey-section">
+
+<div id="scoreboard" class="section-intro">
+   	<!-- <div class="row cta-content"> -->
+   		<h5>Sports</h5>
+   		<h1>Score Board</h1>
+   	</div>
+   <div class="body1">
+<table class="container">
+	<thead>
+		<tr>
+			<th>Sports</th>
+			<th>MECH</th>
+			<th>IP</th>
+			<th>CIVIL</th>
+			<th>IS</th>
+			<th>CSE</th>
+			<th>EEE</th>
+			<th>ECE</th>
+			<th>STAFF</th>
+			<th>M-Tech</th>
+			<th>MCA</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for row in data %}
+		<tr>
+			{% for x in row%}
+			<td>{{ x }}</td>
+			{% endfor %}
+		</tr>
+		{% endfor %}
+
+	</tbody>
+</table>
+
+</div>
+ </section> <!-- /cta -->
+
+	</section> <!-- /services -->
+
+
+	<!-- stats Section
+   ================================================== -->
+	<section id="stats" class="count-up">
+
+		<div class="row">
+			<div class="cols-one">
+
+
+
+					<div class="bgrid stat" style="float:none; margin:10px auto;">
+
+						<img src="static/images/technieks.png" width="180px">
+
+						<h3 class="stat-count2" id="cdown">
+							1500
+						</h3>
+<!--
+            <h2 class="stat-title">
+              TechNIEks is here!!
+            </h2>
+-->
+					</div> <!-- /stat -->
+
+
+			</div> <!-- /twelve -->
+		</div> <!-- /row -->
+
+	</section> <!-- /stats -->
+
+
+{% include 'footer.html' %}
+
+   <div id="preloader">
+    	<div id="loader"></div>
+   </div>
+
+   <!-- Java Script
+   ================================================== -->
+   <script src="/static/js/jquery-2.1.3.min.js?v=1.1"></script>
+   <script src="/static/js/plugins.js?v=1.1"></script>
+   <script src="/static/js/main.js?v=1.1"></script>
+   <script src="/static/js/countdown.js?v=1.1"></script>
+
+</body>
+
+</html>
