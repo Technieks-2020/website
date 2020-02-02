@@ -37,7 +37,7 @@ def onesignalthird():
 
 @app.route('/')
     return "Hello world"
-@app.route('/index.html/')
+@app.route('/index.html')
 def index():
 #    scope = ['https://spreadsheets.google.com/feeds']
 #    credentials = ServiceAccountCredentials.from_json_keyfile_name('technieks19.json', scope)
