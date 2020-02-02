@@ -5,12 +5,8 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from flask_mail import Mail,Message
 import math
+import os
 
-
-
-f=open('passwords.json')
-mail_pass=json.load(f)['zoho']
-f.close()
 
 app = Flask(__name__, static_folder='static')
 app.config.update(
@@ -18,7 +14,7 @@ app.config.update(
     MAIL_PORT=465,
     MAIL_USE_SSL=True,
     MAIL_USERNAME = 'info@technieks.in',
-    MAIL_PASSWORD = mail_pass
+    MAIL_PASSWORD = os.environ['ZOHO']
 )
 mail = Mail(app)
 
@@ -42,17 +38,22 @@ def onesignalthird():
 @app.route('/')
 @app.route('/index.html/')
 def index():
-    scope = ['https://spreadsheets.google.com/feeds']
-    credentials = ServiceAccountCredentials.from_json_keyfile_name('technieks19.json', scope)
-    gc = gspread.authorize(credentials)
-    wks = gc.open_by_key('10pB43SvGbIWX0LEGaRfkYe1XYa_bw-OvlvdUgj-66gQ').sheet1
-    sdata = wks.get_all_values()
-    return render_template('index.html',data=sdata[1:])
+#    scope = ['https://spreadsheets.google.com/feeds']
+#    credentials = ServiceAccountCredentials.from_json_keyfile_name('technieks19.json', scope)
+#    gc = gspread.authorize(credentials)
+#    wks = gc.open_by_key('10pB43SvGbIWX0LEGaRfkYe1XYa_bw-OvlvdUgj-66gQ').sheet1
+#    sdata = wks.get_all_values()
+    return render_template('index.html')
+#FIX THIS
+#    return render_template('index.html',data=sdata[1:])
 
+# FIX THIS
 @app.route('/technieks-run')
 def technieks_run():
     return redirect("http://yepdesk.com/technieks-run", code=302)
 
+#FIX THIS
+"""
 @app.route('/events')
 def events_all():
     try:
@@ -73,8 +74,9 @@ def events_all():
         return render_template('events1.html', events1 = present , past = past, title="New Events")
     except:
         return render_template('events1.html',events1=[], title="New Events")
-
-
+"""
+#FIX THIS
+"""
 @app.route('/events1')
 def test_events():
     try:
@@ -90,10 +92,14 @@ def test_events():
         e1 = {}
         e2 = {}
         return render_template('events3.html',events1=e1, events2=e2, title="All Events")
+"""
 
-@app.route('/gallery/<int:year>')
-def gallery(year):
-        
+#FIX THIS 
+
+#@app.route('/gallery/<int:year>')
+#def gallery(year):
+    
+    #DONT UNCOMMENT FROM HERE --------------
     """url = 'https://graph.facebook.com/v2.12/720663717966776?fields=photos.fields(source).limit(100)&access_token=1327383467301154%7CYDfQ94wTelbffydG5XrnanHnqu0'
     json1_str = requests.get(url)
     jdata = json.loads(json1_str.text)["photos"]
@@ -102,6 +108,8 @@ def gallery(year):
         json1_str = requests.get(jdata["paging"]["next"])
         jdata = json.loads(json1_str.text)
         data.extend(jdata["data"])
+    """
+    #TO HERE -------------
     """
     with open('images.json') as f:
         data = json.load(f)
@@ -131,7 +139,7 @@ def gallery(year):
         
     return render_template('gallery.html',events1=data[lowerLimitAtCurrentPage:upperLimitAtCurrentPage], title="Gallery",year=year,pages=noOfPages, currentPage=currentPage)    
 
-
+"""
 
 
 @app.route('/contact')
@@ -167,7 +175,7 @@ def contactform():
         contactSubject=request.form['contactSubject']
         contactMessage=request.form['contactMessage']
         body="Name: "+contactName+"\nEmail: "+contactEmail+"\nSubject: "+contactSubject+"\nMessage: "+contactMessage
-        msg = Message(subject="Contact Form Entry",body=body, sender=(contactName,"info@technieks.in"), recipients=["info@technieks.in","milanmenezes@gmail.com","technieks.2019@gmail.com"])
+        msg = Message(subject="Contact Form Entry",body=body, sender=(contactName,"info@technieks.in"), recipients=["info@technieks.in","vishruth24@gmail.com","techNIEks2020@gmail.com","devang.j1998@gmail.com"])
         mail.send(msg)
         body1="Dear "+contactName+",\n\nThankyou you for reaching out to us, we have received the following data:\n\n"+"Name: "+contactName+"\nEmail: "+contactEmail+"\nSubject: "+contactSubject+"\nMessage: "+contactMessage+"\n\nWe will get back to you soon.\n\nRegards,\nTeam techNIEks"
         msg1 = Message(subject="Contact techNIEks",body=body1, sender=("techNIEks","info@technieks.in"), recipients=[contactEmail])
