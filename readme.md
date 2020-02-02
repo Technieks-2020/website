@@ -16,7 +16,7 @@ the overall personal growth of every student.
 
 techNIEks is a 3-Day national level techno-cultural extravaganza organized by NIE. One of its idiosyncrasies is that, it is celebrated with unique themes every year. This time, we have decided the theme as NIVEZA - Fiesta of Expressions.Expression is a wing to possibilities. From sorrow to happiness we express the emotions through various forms. We invite you to support us and bring together the zest and passion to show the world the power of expressions. The expected footfall for the three day festival is about 20,000.
 
-# The Website Team:
+<!-- # The Website Team:
 
  - Milan Menezes
  - Gunjan
@@ -44,4 +44,4 @@ techNIEks is a 3-Day national level techno-cultural extravaganza organized by NI
 
 - The master branch is hosted at (https://technieks.in)
 - The dev branch is hosted at (https://beta.technieks.in)
-- The event will be live streamed at (https://technieks.in/live)
+- The event will be live streamed at (https://technieks.in/live) -->
