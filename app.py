@@ -14,7 +14,7 @@ app.config.update(
     MAIL_PORT=465,
     MAIL_USE_SSL=True,
     MAIL_USERNAME = 'info@technieks.in',
-    MAIL_PASSWORD = os.environ['ZOHO']
+    # MAIL_PASSWORD = os.environ['ZOHO']
 )
 mail = Mail(app)
 
@@ -36,7 +36,6 @@ def onesignalthird():
     return send_from_directory(app.static_folder,request.path[1:])
 
 @app.route('/')
-    return "Hello world"
 @app.route('/index.html')
 def index():
 #    scope = ['https://spreadsheets.google.com/feeds']
@@ -101,44 +100,44 @@ def test_events():
 #def gallery(year):
     
     #DONT UNCOMMENT FROM HERE --------------
-    """url = 'https://graph.facebook.com/v2.12/720663717966776?fields=photos.fields(source).limit(100)&access_token=1327383467301154%7CYDfQ94wTelbffydG5XrnanHnqu0'
-    json1_str = requests.get(url)
-    jdata = json.loads(json1_str.text)["photos"]
-    data = jdata["data"]
-    while "next" in jdata["paging"].keys():
-        json1_str = requests.get(jdata["paging"]["next"])
-        jdata = json.loads(json1_str.text)
-        data.extend(jdata["data"])
-    """
-    #TO HERE -------------
-    """
-    with open('images.json') as f:
-        data = json.load(f)
+"""url = 'https://graph.facebook.com/v2.12/720663717966776?fields=photos.fields(source).limit(100)&access_token=1327383467301154%7CYDfQ94wTelbffydG5XrnanHnqu0'
+json1_str = requests.get(url)
+jdata = json.loads(json1_str.text)["photos"]
+data = jdata["data"]
+while "next" in jdata["paging"].keys():
+    json1_str = requests.get(jdata["paging"]["next"])
+    jdata = json.loads(json1_str.text)
+    data.extend(jdata["data"])
+"""
+#TO HERE -------------
+"""
+with open('images.json') as f:
+    data = json.load(f)
 
-    if(year==2019):
-        startFromImage = 0
-        noOfImagesToBeRemoved  = 823
-    elif(year==2018):
-        startFromImage = len(data)-823
-        noOfImagesToBeRemoved  = 473
-    else:
-        return render_template('404.html')
-    data = data[startFromImage:-noOfImagesToBeRemoved]
-    noOfImages = len(data)
-    imagesPerPage = 20
-    noOfPages = int(math.ceil(noOfImages/imagesPerPage))
-    if(request.args.get('page')==None):
-        currentPage = 1
-    else:
-        currentPage = int(request.args.get('page'))    
-    lowerLimitAtCurrentPage = (currentPage-1)*20
-    if(currentPage*20>noOfImages):
-        upperLimitAtCurrentPage = noOfImages
-    else:
-        upperLimitAtCurrentPage = currentPage*20
+if(year==2019):
+    startFromImage = 0
+    noOfImagesToBeRemoved  = 823
+elif(year==2018):
+    startFromImage = len(data)-823
+    noOfImagesToBeRemoved  = 473
+else:
+    return render_template('404.html')
+data = data[startFromImage:-noOfImagesToBeRemoved]
+noOfImages = len(data)
+imagesPerPage = 20
+noOfPages = int(math.ceil(noOfImages/imagesPerPage))
+if(request.args.get('page')==None):
+    currentPage = 1
+else:
+    currentPage = int(request.args.get('page'))    
+lowerLimitAtCurrentPage = (currentPage-1)*20
+if(currentPage*20>noOfImages):
+    upperLimitAtCurrentPage = noOfImages
+else:
+    upperLimitAtCurrentPage = currentPage*20
 
-        
-    return render_template('gallery.html',events1=data[lowerLimitAtCurrentPage:upperLimitAtCurrentPage], title="Gallery",year=year,pages=noOfPages, currentPage=currentPage)    
+    
+return render_template('gallery.html',events1=data[lowerLimitAtCurrentPage:upperLimitAtCurrentPage], title="Gallery",year=year,pages=noOfPages, currentPage=currentPage)    
 
 """
 
