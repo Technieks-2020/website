@@ -1294,7 +1294,7 @@ header .logo a {
  * -------------------------------------------------------------------
  */
 #intro {
-	background: #151515 url(../images/intro-bg.jpg) no-repeat center bottom;
+	background: #151515 url(../images/intro-bg-min.jpg) no-repeat center bottom;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
@@ -2184,7 +2184,7 @@ header .logo a {
  */
 #stats {
 	/* background: #990047; */
-	background-image: url("../images/intro-bg.jpg");
+	background-image: url("../images/intro-bg-min.jpg");
 	background-size: cover;
 	padding-top: 7.2rem;
 	padding-bottom: 6rem;
