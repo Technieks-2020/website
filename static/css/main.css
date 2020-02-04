@@ -68,6 +68,25 @@ html {
 
 html, body {
 	height: 100%;
+
+}
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: black;
+}
+
+::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: black;
+}
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #3852DA;
 }
 body {
 	background: #151515;
@@ -2663,8 +2682,9 @@ footer .copyright span:last-child::after {
 	height: 100vh;
 }
 
-body {
+#top {
 	background: #151515 url(../images/intro-bg-min.jpg) no-repeat center bottom;
+	overflow-x:hidden;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
