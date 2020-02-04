@@ -50,7 +50,7 @@ def index():
 # FIX THIS
 @app.route('/technieks-run')
 def technieks_run():
-    return redirect("http://yepdesk.com/technieks-run", code=302)
+    return redirect("https://yepdesk.com/technieks-run-2020", code=302)
 
 #FIX THIS
 
