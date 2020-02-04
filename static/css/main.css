@@ -2643,13 +2643,15 @@ footer .copyright span:last-child::after {
 	top: 0;
     display: block;
     filter: blur(6px) drop-shadow(0 0 30px rgba(51,180,172,1));
-    transform-origin: 0 100%;
-    transform: skewX(-20deg);
+    transform-origin: 0 20%;
+    /* transform: skewX(-20deg); */
     animation: fadein 6s 1;
 	z-index: -1;
 	width: 100vw;
+	height: 100vh;
 }
-#top {
+
+body {
 	background: #151515 url(../images/intro-bg-min.jpg) no-repeat center bottom;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
