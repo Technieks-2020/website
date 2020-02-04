@@ -2649,7 +2649,7 @@ footer .copyright span:last-child::after {
 	z-index: -1;
 	width: 100vw;
 }
-body {
+#top {
 	background: #151515 url(../images/intro-bg-min.jpg) no-repeat center bottom;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
