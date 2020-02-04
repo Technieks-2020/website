@@ -18,19 +18,13 @@ techNIEks is a 3-Day national level techno-cultural extravaganza organized by NI
 
 <!-- # The Website Team:
 
- - Milan Menezes
- - Gunjan
- - Vishruth
- - Ramprasad
- - Shriharsha M
+ - Varun Bheemaiah
+ - Shittu Rai K
+ - Syed Amir
+ - Mrudul Katti
 
 # The Website Volunteers:
- - Rakshit Deshpande
- - Veer
- - Sumukh
- - Shitij
- - Varun
- - Siddanth
+
 
 # Setting it up!
 
