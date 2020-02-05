@@ -2597,6 +2597,7 @@ footer .copyright span:last-child::after {
 	right: 0;
 	z-index: 600;
 	display: none;
+	padding-right: 1vw;
 }
 #go-top a {
 	text-decoration: none;
