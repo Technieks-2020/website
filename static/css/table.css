@@ -57,15 +57,16 @@ table {
 }
 
 .container tr:nth-child(odd) {
-	  background-color: #bb8fce;
+	  background-color: #4593ed;
 }
 
 .container tr:nth-child(even) {
-	  background-color:  #d2b4de;
+	  background-color:  #0287b8;
 }
 
 .container th {
-	  background-color: #6c3483;
+    background-color: black;
+    color: white;
 }
 
 .container td:first-child {
@@ -73,7 +74,7 @@ table {
  }
 
 .container tr:hover {
-   background-color: #6c3483;
+   background-color: #3852da;
    color: #FFFFFF;
 /* -webkit-box-shadow: 0 6px 6px -6px #0E1119;
 	   -moz-box-shadow: 0 6px 6px -6px #0E1119;
@@ -81,7 +82,7 @@ table {
 }
 
 .container td:hover {
-  background-color: #ffe552;
+  background-color: white;
   color: #000;
   font-weight: bold;
 /*
