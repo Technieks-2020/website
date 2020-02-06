@@ -354,6 +354,9 @@ th {
 	color: #313131;
 	font-family: "poppins-bold", sans-serif;
 }
+#totalBorder{
+	border-top: 3px solid black;
+  }
 td {
 	line-height: 1.5;
 }
