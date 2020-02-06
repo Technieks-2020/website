@@ -12,9 +12,9 @@ var CURVE_POINT_MAX_FLOAT_Y_DIST = 80;
 var CURVE_POINT_MIN_FLOAT_DIST = 15;
 var CURVE_POINT_MAX_FLOAT_TIME = 9000; // longest a curve point can take to get to next keyframe
 var CURVE_POINT_MIN_FLOAT_TIME = 3000; // shortest a curve point can take to get to next keyframe
-var BRUSH_COUNT = 1000;
+var BRUSH_COUNT = 150;
 var BRUSH_WIDTH = 30;
-var BRUSH_HEIGHT = 450;
+var BRUSH_HEIGHT = 1000;
 var BRUSH_MIN_SCALE_Y = .02;
 var BRUSH_MAX_SCALE_Y_VARIANCE = .5;
 var BRUSH_MAX_ALPHA_VARIANCE = .7;
@@ -23,10 +23,10 @@ var BRUSH_MIN_ANIM_TIME = 1500;
 var BRUSH_MAX_Z_ANIM_TIME = 80000;
 var BRUSH_MIN_Z_ANIM_TIME = 58000;
 var BRUSH_ALPHA_DROPOFF = .07;
-var MOUSE_X_OFFSET = 50;
-var MOUSE_Y_OFFSET = 25;
-var mouseXPercentage = .5;
-var mouseYPercentage = .5;
+var MOUSE_X_OFFSET = 0;
+var MOUSE_Y_OFFSET = 0;
+var mouseXPercentage = 0;
+var mouseYPercentage = 0;
 
 /**
  * get point in bezier curve
