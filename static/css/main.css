@@ -343,6 +343,7 @@ table {
 	width: 100%;
 	max-width: 100%;
 	font-family: "lora-regular", sans-serif;
+	border: 3px solid #000;
 }
 th, td {
 	padding: 1.5rem 3rem;
