@@ -343,16 +343,20 @@ table {
 	width: 100%;
 	max-width: 100%;
 	font-family: "lora-regular", sans-serif;
+	border: 3px solid #000;
 }
 th, td {
 	padding: 1.5rem 3rem;
 	text-align: left;
-	border-bottom: 1px solid #E8E8E8;
+	border-bottom: 1px solid #0000;
 }
 th {
 	color: #313131;
 	font-family: "poppins-bold", sans-serif;
 }
+#totalBorder{
+	border-top: 3px solid black;
+  }
 td {
 	line-height: 1.5;
 }

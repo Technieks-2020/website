@@ -25,8 +25,8 @@ var BRUSH_MIN_Z_ANIM_TIME = 58000;
 var BRUSH_ALPHA_DROPOFF = .07;
 var MOUSE_X_OFFSET = 0;
 var MOUSE_Y_OFFSET = 0;
-var mouseXPercentage = .5;
-var mouseYPercentage = .5;
+var mouseXPercentage = 0;
+var mouseYPercentage = 0;
 
 /**
  * get point in bezier curve
