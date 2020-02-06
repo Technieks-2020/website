@@ -14,7 +14,7 @@ app.config.update(
     MAIL_PORT=465,
     MAIL_USE_SSL=True,
     MAIL_USERNAME = 'info@technieks.in',
-    # MAIL_PASSWORD = os.environ['ZOHO']
+    MAIL_PASSWORD = os.environ['ZOHO']
 )
 mail = Mail(app)
 
@@ -175,7 +175,7 @@ def contactform():
         contactSubject=request.form['contactSubject']
         contactMessage=request.form['contactMessage']
         body="Name: "+contactName+"\nEmail: "+contactEmail+"\nSubject: "+contactSubject+"\nMessage: "+contactMessage
-        msg = Message(subject="Contact Form Entry",body=body, sender=(contactName,"info@technieks.in"), recipients=["info@technieks.in","vishruth24@gmail.com","techNIEks2020@gmail.com","devang.j1998@gmail.com"])
+        msg = Message(subject="Contact Form Entry",body=body, sender=(contactName,"info@technieks.in"), recipients=["techNIEks2020@gmail.com"])
         mail.send(msg)
         body1="Dear "+contactName+",\n\nThankyou you for reaching out to us, we have received the following data:\n\n"+"Name: "+contactName+"\nEmail: "+contactEmail+"\nSubject: "+contactSubject+"\nMessage: "+contactMessage+"\n\nWe will get back to you soon.\n\nRegards,\nTeam techNIEks"
         msg1 = Message(subject="Contact techNIEks",body=body1, sender=("techNIEks","info@technieks.in"), recipients=[contactEmail])
