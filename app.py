@@ -96,8 +96,10 @@ def test_events():
 
 #FIX THIS 
 
-#@app.route('/gallery/<int:year>')
-#def gallery(year):
+@app.route('/gallery')
+def gallery():
+    return render_template('gallery.html')    
+
     
     #DONT UNCOMMENT FROM HERE --------------
 """url = 'https://graph.facebook.com/v2.12/720663717966776?fields=photos.fields(source).limit(100)&access_token=1327383467301154%7CYDfQ94wTelbffydG5XrnanHnqu0'
@@ -108,9 +110,6 @@ while "next" in jdata["paging"].keys():
     json1_str = requests.get(jdata["paging"]["next"])
     jdata = json.loads(json1_str.text)
     data.extend(jdata["data"])
-"""
-#TO HERE -------------
-"""
 with open('images.json') as f:
     data = json.load(f)
 
@@ -135,11 +134,7 @@ if(currentPage*20>noOfImages):
     upperLimitAtCurrentPage = noOfImages
 else:
     upperLimitAtCurrentPage = currentPage*20
-
-    
-return render_template('gallery.html',events1=data[lowerLimitAtCurrentPage:upperLimitAtCurrentPage], title="Gallery",year=year,pages=noOfPages, currentPage=currentPage)    
-
-"""
+""" 
 
 
 @app.route('/contact')
