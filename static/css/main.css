@@ -2604,6 +2604,8 @@ footer .copyright span:last-child::after {
 	padding-right: 1vw;
 }
 #go-top a {
+	border-radius: 7px;
+	margin-bottom: 13px;
 	text-decoration: none;
 	border: 0 none;
 	display: block;
