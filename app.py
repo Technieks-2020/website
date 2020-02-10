@@ -1,4 +1,5 @@
 from flask import Flask, g, render_template, request, redirect, send_from_directory
+from flask_caching import Cache
 import requests
 import json
 import gspread
@@ -7,8 +8,14 @@ from flask_mail import Mail,Message
 import math
 import os
 
-
+config = {
+    "DEBUG": True,          
+    "CACHE_TYPE": "simple", 
+    "CACHE_DEFAULT_TIMEOUT": 300
+}
 app = Flask(__name__, static_folder='static')
+app.config.from_mapping(config)
+cache = Cache(app)
 app.config.update(
     MAIL_SERVER='smtp.zoho.com',
     MAIL_PORT=465,
@@ -37,6 +44,7 @@ def onesignalthird():
 
 @app.route('/')
 @app.route('/index.html')
+@cache.cached(timeout=50)
 def index():
 #    scope = ['https://spreadsheets.google.com/feeds']
 #    credentials = ServiceAccountCredentials.from_json_keyfile_name('technieks19.json', scope)
@@ -49,6 +57,7 @@ def index():
 
 # FIX THIS
 @app.route('/technieks-run')
+@cache.cached(timeout=50)
 def technieks_run():
     return redirect("https://yepdesk.com/technieks-run-2020", code=302)
 
@@ -97,6 +106,7 @@ def test_events():
 #FIX THIS 
 
 @app.route('/gallery')
+@cache.cached(timeout=50)
 def gallery():
     return render_template('gallery.html')    
 
@@ -138,10 +148,12 @@ else:
 
 
 @app.route('/contact')
+@cache.cached(timeout=50)
 def contact():
     return render_template('contact.html')
 
 @app.route('/about')
+@cache.cached(timeout=50)
 def about():
     return render_template('about.html')
 
@@ -154,6 +166,7 @@ def about():
 #     return redirect('https://www.payumoney.com/events/#/buyTickets/technieksmarathon18')
 
 @app.route('/youtube/')
+@cache.cached(timeout=50)
 def youtube():
     return redirect('https://www.youtube.com/channel/UC0Ky30GAIfdtGccczVNUIqA')
 
@@ -163,6 +176,7 @@ def youtube():
 #     return redirect('https://www.payumoney.com/events/#/buyTickets/cyclothon2018')
 
 @app.route('/contactform/',  methods=['GET', 'POST'])
+@cache.cached(timeout=50)
 def contactform():
     try:
         contactName=request.form['contactName']
@@ -180,6 +194,7 @@ def contactform():
         return "Error"
 
 @app.route('/live')
+@cache.cached(timeout=50)
 def live():
     try:
         return render_template("live.html")
@@ -188,6 +203,7 @@ def live():
 
 
 @app.errorhandler(404)
+@cache.cached(timeout=50)
 def page_not_found(e):
     return render_template("404.html")
 
