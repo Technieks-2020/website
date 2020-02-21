@@ -59,7 +59,27 @@
 	<link rel="manifest" href="/manifest.json" />
 	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
 	<script src="/static/js/onesignal.js?v=1.1"></script>
-
+	<style>
+		.videoWrapper {
+			overflow: hidden;
+			padding-top: 56.25%;
+			position: relative;
+		  }
+		   
+		  .videoWrapper iframe {
+			 border: 0;
+			 height: 100%;
+			 left: 0;
+			 position: absolute;
+			 top: 0;
+			 width: 100%;
+		  }
+		   
+		  /* 4x3 Aspect Ratio */
+		  .videoWrapper-4x3 {
+			padding-top: 75%;
+		  }
+	</style>
 </head>
 
 <body id="top">
@@ -149,11 +169,16 @@
        celebrate the energy for brighter future and brighter ourselves. The expected footfall
        for three day festival is about 20,000.</p>
        <a class="button stroke" href="/about" title="">Read More</a>
-     </div>
+	 </div>
    </div>
- </div> <!-- /section-intro -->
+</div> 
+   <div class="videoWrapper">
+	 <iframe src="https://www.youtube.com/embed/YR9iyeWNF58" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+ <!-- /section-intro -->
 
 <br>
+
 </section> <!-- /process-->
 
 
