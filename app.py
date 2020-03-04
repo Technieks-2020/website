@@ -145,7 +145,9 @@ if(currentPage*20>noOfImages):
 else:
     upperLimitAtCurrentPage = currentPage*20
 """ 
-
+@app.route('/events')
+def events():
+    return render_template('events.html')
 
 @app.route('/contact')
 @cache.cached(timeout=50)
