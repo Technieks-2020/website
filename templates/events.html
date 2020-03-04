@@ -4,23 +4,12 @@
 <!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
 <head>
 
-    <!-- Global site tag (gtag.js?v=1.1) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114338765-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-114338765-1');
-</script>
-
    <!--- basic page needs
    ================================================== -->
    <meta charset="utf-8">
 	<title>techNIEks</title>
-   	<link rel="icon" type="image/ico" href="/static/images/favicon.png" />
+		<link rel="icon" type="image/ico" href="/static/images/favicon.png" />
 	<meta name="description" content="techNIEks is a 3-Day national level techno-cultural extravaganza organized by NIE">
-
 
 
    <!-- mobile specific metas
@@ -40,7 +29,9 @@
    <link rel="stylesheet" href="/static/css/base.css?v=1.1">
    <link rel="stylesheet" href="/static/css/main.css?v=1.1">
    <link rel="stylesheet" href="/static/css/vendor.css?v=1.1">
-   <link rel="stylesheet" href="/static/css/events.css">
+   <link rel="stylesheet" href="/static/css/table.css?v=1.1">
+   <!-- <link rel="stylesheet" href="/static/css/sponsors.css?v=1.1"> -->
+
 
    <!-- script
    ================================================== -->
@@ -65,12 +56,12 @@
    <header>
    	<div class="row">
 
-   		<div class="top-bar">
-   			<a class="menu-toggle" href="#"><span>Menu</span></a>
+   		<div class="top-bar" >
+   			<a class="menu-toggle" href="#"><span></span></a>
 
-	   		  <div class="logo menu-toggle">
-             <a href=""><h2 style="color: white;">MENU</h2></a>
-          </div>
+   				<div class="logo menu-toggle">
+		         <a href=""><h2 style="color: white;">MENU</h2></a>
+		      </div>
 
           {% include 'nav.html' %}
    		</div> <!-- /top-bar -->
@@ -93,7 +84,7 @@
 	   			     <img src="static/images/technieks-min.png" style="width:400px;">
           </center>
 
-	   			<!-- <a class="button stroke" href="/about" title="">More About Us</a> -->
+	   			<a class="button stroke" href="/about" title="">More About Us</a>
 
 	   		</div>
 
@@ -104,75 +95,205 @@
              <li><a href="https://www.facebook.com/technieks"><i class="fa fa-facebook"></i></a></li>
               <li><a href="https://www.instagram.com/technieks2020/"><i class="fa fa-instagram"></i></a></li>
          <li><a href="https://www.youtube.com/channel/UC0Ky30GAIfdtGccczVNUIqA"><i class="fa fa-youtube"></i></a></li>
+
       </ul> <!-- /intro-social -->
 
    </section> <!-- /intro -->
 
 
-   <!-- about section
+	<!-- Portfolio Section
    ================================================== -->
-   <section id="about">
+	<section id="portfolio">
 
-      	<!-- <div class="row section-intro">
-      		<div class="col-fifteen"> -->
+		<div class="row section-intro spons-top">
+   		<div class="col-twelve">
 
-      			<!-- <h5>Events</h5> -->
-      			<h1 align="center">Events</h1>
+   			<h1>Events</h1>
 
-      			<div class="body1">
+   		</div>
+   	</div> <!-- /section-intro-->
 
-                    <table class='events container'>
-                        <tr>
-                            <td>Akcent Live at TechNIEks 2020</td>
-                            <td>6<sup>th</sup> March 2020</td>
-                            <td>20:00</td>
-                        </tr>
-                        <tr>
-                            <td>Battle of Bands</td>
-                            <td>5<sup>th</sup> March 2020</td>
-                            <td>10:00</td>
-                        </tr>
-                        <tr>
-                            <td>Technieks homecoming</td>
-                            <td>4<sup>th</sup> March 2020</td>
-                            <td>16:30</td>
-                        </tr>
-                        <tr>
-                            <td>Marathon</td>
-                            <td>1<sup>st</sup> March 2020</td>
-                            <td>05:00</td>
-                        </tr>
-                        <tr>
-                            <td>Sangeeth Shatranj</td>
-                            <td>29<sup>th</sup> February 2020</td>
-                            <td>10:00</td>
-                        </tr>
-                        <tr>
-                            <td>Cultural auditions</td>
-                            <td>28<sup>th</sup> - 29<sup>th</sup> February 2020</td>
-                            <td>10:00</td>
-                        </tr>
-                        <tr>
-                            <td>Talent Hunt</td>
-                            <td>30<sup>th</sup> - 31<sup>st</sup> January 2020</td>
-                            <td>13:30</td>
-                        </tr>
-                        
-                    </table>
+   	<div class="row portfolio-content">
 
-   			</div>
-   		<!-- </div> -->
-   	<!-- </div> /section-intro -->
+   		<div class="col-twelve">
 
-       <!-- https://in.bookmyshow.com/events/akcent-live-at-technieks-2020/ET00128321 -->
-       <!-- <button class="submitform">Submit</button> -->
-       <div class="form-field" style="text-align: center; margin-top: 3em;">
-        <button style="background-color: #3852da; color: white" onclick="window.open('https://in.bookmyshow.com/events/akcent-live-at-technieks-2020/ET00128321', '_blank')" class="submitform">Buy Tickets</button>
-     </div>
+   			<!-- portfolio-wrapper -->
+	         <div id="folio-wrapper" class="block-1-3 block-mob-full stack">
+
+	         	<div class="bgrid folio-item">
+	               <div class="item-wrap" style="padding: 5%;">
+	               	<img src="/static/images/akcent.jpg" alt="test">
+					   <a href="https://in.bookmyshow.com/events/akcent-live-at-technieks-2020/ET00128321?fbclid=IwAR1VM85BRgUhcVrKIs1Rhjwqyhp-AvHqBO0v1cXxnGE2Zd15LcIpNQbgXW0" target="_blank" class="overlay">
+						<div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+		     					       <h3 class="folio-title">Akcent Live at TechNIEks 2020</h3>
+		     					    	 <span class="folio-types">
+											6<sup>th</sup> March 2020 -	
+										</span>
+										<span class="folio-types">
+											20:00	
+										</span>
+										<br>
+										<span>
+											<button class="submitform" onclick="window.open('https://in.bookmyshow.com/events/akcent-live-at-technieks-2020/ET00128321?fbclid=IwAR1VM85BRgUhcVrKIs1Rhjwqyhp-AvHqBO0v1cXxnGE2Zd15LcIpNQbgXW0','_blank')">Register here</button>
+										</span>
+							</div>
+	                     </div>
+	                  </a>
+	               </div>
+				</div>
+				<div class="bgrid folio-item">
+					<div class="item-wrap" style="padding: 5%;">
+						<img src="/static/images/bob.jpg" alt="test">
+					   <a href="/" class="overlay">
+						  <div class="folio-item-table">
+							  <div class="folio-item-cell">
+										 <h3 class="folio-title">Battle of Bands</h3>
+										   <span class="folio-types">
+											 5<sup>th</sup> March 2020 -	
+										 </span>
+										 <span class="folio-types">
+											 10:00	
+										 </span>
+										 
+									 </div>
+						  </div>
+					   </a>
+					</div>
+				 </div>
+				 <div class="bgrid folio-item">
+					<div class="item-wrap" style="padding: 5%;">
+						<img src="/static/images/homecoming.jpg" alt="test">
+					   <a href="/" class="overlay">
+						  <div class="folio-item-table">
+							  <div class="folio-item-cell">
+										 <h3 class="folio-title">Under the Aurora - Homecoming</h3>
+										   <span class="folio-types">
+											 4<sup>th</sup> March 2020 -	
+										 </span>
+										 <span class="folio-types">
+											 16:30	
+										 </span>
+									 </div>
+						  </div>
+					   </a>
+					</div>
+				 </div>
+				 <div class="bgrid folio-item">
+					<div class="item-wrap" style="padding: 5%;">
+						<img src="/static/images/marathon.jpg" alt="test">
+					   <a href="/" class="overlay">
+						  <div class="folio-item-table">
+							  <div class="folio-item-cell">
+										 <h3 class="folio-title">Marathon</h3>
+										   <span class="folio-types">
+											 1<sup>st</sup> March 2020 -	
+										 </span>
+										 <span class="folio-types">
+											 05:00	
+										 </span>
+									 </div>
+						  </div>
+					   </a>
+					</div>
+				 </div>
+
+				 <div class="bgrid folio-item">
+					<div class="item-wrap" style="padding: 5%;">
+						<img src="/static/images/talent.jpg" alt="test">
+					   <a href="/" class="overlay">
+						  <div class="folio-item-table">
+							  <div class="folio-item-cell">
+										 <h3 class="folio-title">Talent Hunt</h3>
+										   <span class="folio-types">
+											 30<sup>th</sup> - 31 <sup>st</sup> January 2020 -	
+										 </span>
+										 <span class="folio-types">
+											 13:30	
+										 </span>
+									 </div>
+						  </div>
+					   </a>
+					</div>
+				 </div>
+				 <div class="bgrid folio-item">
+					<div class="item-wrap" style="padding: 5%;">
+						<img src="/static/images/cul.jpg" alt="test">
+					   <a href="/" class="overlay">
+						  <div class="folio-item-table">
+							  <div class="folio-item-cell">
+										 <h3 class="folio-title">Cultural auditions</h3>
+										   <span class="folio-types">
+											 28<sup>th - 29 <sup>th</sup></sup> February 2020 -	
+										 </span>
+										 <span class="folio-types">
+											 10:00	
+										 </span>
+									 </div>
+						  </div>
+					   </a>
+					</div>
+				 </div>
+				 <div class="bgrid folio-item">
+					<div class="item-wrap" style="padding: 5%;">
+						<img src="/static/images/sangeeth.jpg" alt="test">
+					   <a href="/" class="overlay">
+						  <div class="folio-item-table">
+							  <div class="folio-item-cell">
+										 <h3 class="folio-title">Sangeeth Shatranj</h3>
+										   <span class="folio-types">
+											 29<sup>th</sup> February 2020 -	
+										 </span>
+										 <span class="folio-types">
+											 10:00	
+										 </span>
+									 </div>
+						  </div>
+					   </a>
+					</div>
+				 </div>
+				 
+				 
 
 
-   </section> <!-- /process-->
 
+
+	         </div> <!-- /portfolio-wrapper -->
+
+   		</div>  <!-- /twelve -->
+
+   	</div> <!-- /portfolio-content -->
+
+	</section> <!-- /portfolio -->
+
+
+	<!-- stats Section
+   ================================================== -->
+	<section id="stats" class="count-up">
+
+		<div class="row">
+			<div class="cols-one">
+
+
+
+					<div class="bgrid stat" style="float:none; margin:10px auto;">
+
+						<img src="static/images/technieks-min.png" width="180px">
+
+						<h3 class="stat-count2" id="cdown">
+							1500
+						</h3>
+<!--            <h2 class="stat-title">
+              TechNIEks is here!!
+            </h2>
+-->
+					</div> <!-- /stat -->
+
+
+			</div> <!-- /twelve -->
+		</div> <!-- /row -->
+
+	</section> <!-- /stats -->
 
 
 {% include 'footer.html' %}
@@ -187,6 +308,7 @@
    <script src="/static/js/plugins.js?v=1.1"></script>
    <script src="/static/js/main.js?v=1.1"></script>
    <script src="/static/js/countdown.js?v=1.1"></script>
+
 </body>
 
 </html>

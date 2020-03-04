@@ -109,7 +109,6 @@
    		<div class="col-twelve">
 
    			<h1>Events</h1>
-   			<h5>New Events</h5>
 
    		</div>
    	</div> <!-- /section-intro-->
@@ -121,48 +120,141 @@
    			<!-- portfolio-wrapper -->
 	         <div id="folio-wrapper" class="block-1-3 block-mob-full stack">
 
-	         	{% for x in events1 %}
-
 	         	<div class="bgrid folio-item">
 	               <div class="item-wrap" style="padding: 5%;">
-	               	<img src="{{ x["cover"]["source"] }}" alt="{{ x["name"] }}">
-	                  <a href="{{ "#m"+x["id"] }}" class="overlay">
-	                     <div class="folio-item-table">
+	               	<img src="/static/images/akcent.jpg" alt="test">
+					   <a href="https://in.bookmyshow.com/events/akcent-live-at-technieks-2020/ET00128321?fbclid=IwAR1VM85BRgUhcVrKIs1Rhjwqyhp-AvHqBO0v1cXxnGE2Zd15LcIpNQbgXW0" target="_blank" class="overlay">
+						<div class="folio-item-table">
 	                     	<div class="folio-item-cell">
-		     					       <h3 class="folio-title">{{ x["name"] }}</h3>
+		     					       <h3 class="folio-title">Akcent Live at TechNIEks 2020</h3>
 		     					    	 <span class="folio-types">
-		     					       	  {{ x["start_time"][:10] }}
-		     					       </span>
-		     					   </div>
+											6<sup>th</sup> March 2020 -	
+										</span>
+										<span class="folio-types">
+											20:00	
+										</span>
+										<br>
+										<span>
+											<button class="submitform" onclick="window.open('https://in.bookmyshow.com/events/akcent-live-at-technieks-2020/ET00128321?fbclid=IwAR1VM85BRgUhcVrKIs1Rhjwqyhp-AvHqBO0v1cXxnGE2Zd15LcIpNQbgXW0','_blank')">Register here</button>
+										</span>
+							</div>
 	                     </div>
 	                  </a>
 	               </div>
-                 <!-- <br> -->
-	        		</div> <!-- /folio-item -->
+				</div>
+				<div class="bgrid folio-item">
+					<div class="item-wrap" style="padding: 5%;">
+						<img src="/static/images/bob.jpg" alt="test">
+					   <a href="/" class="overlay">
+						  <div class="folio-item-table">
+							  <div class="folio-item-cell">
+										 <h3 class="folio-title">Battle of Bands</h3>
+										   <span class="folio-types">
+											 5<sup>th</sup> March 2020 -	
+										 </span>
+										 <span class="folio-types">
+											 10:00	
+										 </span>
+										 
+									 </div>
+						  </div>
+					   </a>
+					</div>
+				 </div>
+				 <div class="bgrid folio-item">
+					<div class="item-wrap" style="padding: 5%;">
+						<img src="/static/images/homecoming.jpg" alt="test">
+					   <a href="/" class="overlay">
+						  <div class="folio-item-table">
+							  <div class="folio-item-cell">
+										 <h3 class="folio-title">Under the Aurora - Homecoming</h3>
+										   <span class="folio-types">
+											 4<sup>th</sup> March 2020 -	
+										 </span>
+										 <span class="folio-types">
+											 16:30	
+										 </span>
+									 </div>
+						  </div>
+					   </a>
+					</div>
+				 </div>
+				 <div class="bgrid folio-item">
+					<div class="item-wrap" style="padding: 5%;">
+						<img src="/static/images/marathon.jpg" alt="test">
+					   <a href="/" class="overlay">
+						  <div class="folio-item-table">
+							  <div class="folio-item-cell">
+										 <h3 class="folio-title">Marathon</h3>
+										   <span class="folio-types">
+											 1<sup>st</sup> March 2020 -	
+										 </span>
+										 <span class="folio-types">
+											 05:00	
+										 </span>
+									 </div>
+						  </div>
+					   </a>
+					</div>
+				 </div>
 
-	        		<div id="{{ "m"+x["id"] }}" class="popup-modal slider mfp-hide">
+				 <div class="bgrid folio-item">
+					<div class="item-wrap" style="padding: 5%;">
+						<img src="/static/images/talent.jpg" alt="test">
+					   <a href="/" class="overlay">
+						  <div class="folio-item-table">
+							  <div class="folio-item-cell">
+										 <h3 class="folio-title">Talent Hunt</h3>
+										   <span class="folio-types">
+											 30<sup>th</sup> - 31 <sup>st</sup> January 2020 -	
+										 </span>
+										 <span class="folio-types">
+											 13:30	
+										 </span>
+									 </div>
+						  </div>
+					   </a>
+					</div>
+				 </div>
+				 <div class="bgrid folio-item">
+					<div class="item-wrap" style="padding: 5%;">
+						<img src="/static/images/cul.jpg" alt="test">
+					   <a href="/" class="overlay">
+						  <div class="folio-item-table">
+							  <div class="folio-item-cell">
+										 <h3 class="folio-title">Cultural auditions</h3>
+										   <span class="folio-types">
+											 28<sup>th - 29 <sup>th</sup></sup> February 2020 -	
+										 </span>
+										 <span class="folio-types">
+											 10:00	
+										 </span>
+									 </div>
+						  </div>
+					   </a>
+					</div>
+				 </div>
+				 <div class="bgrid folio-item">
+					<div class="item-wrap" style="padding: 5%;">
+						<img src="/static/images/sangeeth.jpg" alt="test">
+					   <a href="/" class="overlay">
+						  <div class="folio-item-table">
+							  <div class="folio-item-cell">
+										 <h3 class="folio-title">Sangeeth Shatranj</h3>
+										   <span class="folio-types">
+											 29<sup>th</sup> February 2020 -	
+										 </span>
+										 <span class="folio-types">
+											 10:00	
+										 </span>
+									 </div>
+						  </div>
+					   </a>
+					</div>
+				 </div>
+				 
+				 
 
-				     	<div class="media">
-				     		<img src="{{ x["cover"]["source"] }}" alt="{{ x["name"] }}" />
-				     	</div>
-
-					   <div class="description-box">
-					      <h4>{{ x["name"] }}</h4>
-					      <p>{{ x["description"] | replace('\n','<br>' | safe)}}</p>
-
-					      <!-- <div class="categories">Web Development</div> -->
-					   </div>
-
-			         <div class="link-box">
-			         	{% if 'ticket_uri' in x %}
-			            <a href="{{ x['ticket_uri'] }}" target="_blank">Register</a>
-			            {% endif %}
-					      <a href="#" class="popup-modal-dismiss">Close</a>
-			         </div>
-
-				   </div> <!-- /modal-01 -->
-
-				   {% endfor %}
 
 
 
@@ -172,70 +264,6 @@
 
    	</div> <!-- /portfolio-content -->
 
-		<div class="row section-intro spons-top">
-   		<div class="col-twelve">
-				<br><br>
-   			<h5>Past Events</h5>
-
-   		</div>
-   	</div> <!-- /section-intro-->
-
-   	<div class="row portfolio-content">
-
-   		<div class="col-twelve">
-
-   			<!-- portfolio-wrapper -->
-	         <div id="folio-wrapper" class="block-1-3 block-mob-full stack">
-
-	         	{% for x in past %}
-
-	         	<div class="bgrid folio-item">
-	               <div class="item-wrap" style="padding: 5%;">
-	               	<img src="{{ x["cover"]["source"] }}" alt="{{ x["name"] }}">
-	                  <a href="{{ "#m"+x["id"] }}" class="overlay">
-	                     <div class="folio-item-table">
-	                     	<div class="folio-item-cell">
-		     					       <h3 class="folio-title">{{ x["name"] }}</h3>
-		     					    	 <span class="folio-types">
-		     					       	  {{ x["start_time"][:10] }}
-		     					       </span>
-		     					   </div>
-	                     </div>
-	                  </a>
-	               </div>
-                 <!-- <br> -->
-	        		</div> <!-- /folio-item -->
-	        		<div id="{{ "m"+x["id"] }}" class="popup-modal slider mfp-hide">
-
-				     	<div class="media">
-				     		<img src="{{ x["cover"]["source"] }}" alt="{{ x["name"] }}" />
-				     	</div>
-
-					   <div class="description-box">
-					      <h4>{{ x["name"] }}</h4>
-					      <p>{{ x["description"] | replace('\n','<br>' | safe)}}</p>
-
-					      <!-- <div class="categories">Web Development</div> -->
-					   </div>
-
-			         <div class="link-box">
-			         	{% if 'ticket_uri' in x %}
-			            <a href="{{ x['ticket_uri'] }}" target="_blank">Register</a>
-			            {% endif %}
-					      <a href="#" class="popup-modal-dismiss">Close</a>
-			         </div>
-
-				   </div> <!-- /modal-01 -->
-
-				   {% endfor %}
-
-
-
-	         </div> <!-- /portfolio-wrapper -->
-
-   		</div>  <!-- /twelve -->
-
-   	</div> <!-- /portfolio-content -->
 	</section> <!-- /portfolio -->
 
 
